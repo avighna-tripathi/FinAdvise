@@ -13,8 +13,8 @@ import logging
 load_dotenv()
 
 # Securely load API keys from .env file
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-ALPHA_VANTAGE_API_KEY = os.getenv("ALPHA_VANTAGE_API_KEY")
+GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
+ALPHA_VANTAGE_API_KEY = st.secrets["ALPHA_VANTAGE_API_KEY"]
 
 # Setup logging
 logging.basicConfig(level=logging.INFO)
