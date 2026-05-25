@@ -41,7 +41,7 @@ class FinanceState(TypedDict):
 # === LLM ===
 llm = ChatGroq(
     api_key=GROQ_API_KEY,
-    model="llama3-70b-8192"
+    model="llama-3.3-70b-versatile"
 )
 # === USER PROFILE COLLECTION ===
 async def collect_user_data(state: FinanceState) -> FinanceState:
