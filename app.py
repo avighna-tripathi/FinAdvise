@@ -39,8 +39,10 @@ class FinanceState(TypedDict):
     hitl_flag: Optional[bool]  # Flag for high-risk queries
 
 # === LLM ===
-llm = ChatGroq(groq_api_key=GROQ_API_KEY, model_name="llama3-70b-8192")
-
+llm = ChatGroq(
+    api_key=GROQ_API_KEY,
+    model="llama3-70b-8192"
+)
 # === USER PROFILE COLLECTION ===
 async def collect_user_data(state: FinanceState) -> FinanceState:
     user_input = state['user_input']
